@@ -1,7 +1,6 @@
 import argparse
 import random
 import math
-import csv
 import sys
 import os
 
@@ -35,30 +34,6 @@ def calculate_haversine_distance(start: List[Union[str, float]], end: List[Union
     )
     c = 2 * math.asin(math.sqrt(a))
     return EARTH_RADIUS * c
-
-def read_places_from_csv(path: str) -> Tuple[List[Union[str, float]]]:
-    """
-    This function reads a csv file with the name, latitude and longitude of different places.
-
-    Args:
-    - path: str, path to the csv file.
-
-    Returns:
-    - header: List[Union[str, float], list of headers
-    - places: List[Union[str, float], list of tuples where each tuple contains the name of a place,
-              its latitude and longitude.
-
-    """
-    places = []
-    with open(path, 'r') as f:
-        reader = csv.reader(f)
-        header = next(reader)
-        for row in reader:
-            name, lat, lon = row
-            lat = float(lat)
-            lon = float(lon)
-            places.append((name, lat, lon))
-    return header, places
 
 def create_places_list(places: List[Union[str, float]], n: int) -> List[Union[str, float]]:
     """
