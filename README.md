@@ -1,49 +1,32 @@
-======
-airdis
-======
-
-
-.. image:: https://img.shields.io/pypi/v/airdis.svg
-        :target: https://pypi.python.org/pypi/airdis
-
-.. image:: https://img.shields.io/travis/codemascot/airdis.svg
-        :target: https://travis-ci.com/codemascot/airdis
-
-.. image:: https://readthedocs.org/projects/airdis/badge/?version=latest
-        :target: https://airdis.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
-
-.. image:: https://pyup.io/repos/github/codemascot/airdis/shield.svg
-     :target: https://pyup.io/repos/github/codemascot/airdis/
-     :alt: Updates
-
-
-
+# AirDis
 This airdis CLI calculates the great circle distance among the a sets of places which comes from a CSV file.
 
 
 * Free software: MIT license
 * Documentation: https://airdis.readthedocs.io.
 
-Installation & Run
-------------------
+## Installation & Run
+
 1. First clone this repo in your machine
-	 ```
-	 $ git clone git@github.com:codemascot/airdis.git <PROJECT_PATH>
-	 ```
+```
+$ git clone git@github.com:codemascot/airdis.git <PROJECT_PATH>
+```
 2. Change directory (`cd`) to `<PROJECT_PATH>`
+```
+$ cd <PROJECT_PATH>
+```
 3. Then install it with below `pip` command
-	 ```
-	 $ pip install -e .
-	 ```
+```
+$ pip install -e .
+```
 4. And run it with `airdis` in your Terminal
-	 ```
-	 $ airdis
-	 ```
-	
-Example
--------
+```
+$ airdis -n 5 -p "csv/path/places.csv"
+```
+Here both `-n` and `-p` arguments are optional.
+
+## Example
+
 ```
 airdis on  main via 🐍 v3.10.9
 ❯ airdis -n 5
@@ -63,8 +46,7 @@ Anchorage           Jakarta             11320.469203385404 km
 Average distance: 6392.91 km. Closest pair: Oslo - Anchorage 6443.94 km
 ```
 
-Credits
--------
+## Credits
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
